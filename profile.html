@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkedin</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @media only screen and (max-width:600px){
+            .navbar{
+                width:100%;
+                flex-basis: 100%;
+                padding:5px;
+                position: fixed;}
+            .sidebar-people{
+                flex-basis: 100%;
+                width: 100%;
+                margin-right:100%;
+            }
+            .profile-desc-row h3{
+                font-size: 13.5px;
+            }
+            .profile-container-inner h1{
+                font-size: 19px;
+            }
+            .profile-dict p{
+                text-align: justify;
+            }
+            .profile-dict h2{
+                color: #333;
+                font-size: 20px;
+            }
+            
+    .search-box{
+        background: transparent;
+        width: auto;
+        padding: 0;
+        margin-left: 5px;
+    }
+    .profile-sidebar{
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .search-box input{
+        width: 0;
+        padding: 0;
+    }
+    .navbar-center ul li a span{
+        display: none;
+    }
+    .navbar-center ul li a
+    {padding-right: 0;
+    margin: 8px;}  
+
+    .nav-profile-img{
+        width: 30px;
+        margin-left: 5px;
+    }}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt=""></a>
+            <div class="search-box">
+                <img src="images/search.png" alt="">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li><a href="index.html" class="active-line"><img src="images/home.png" ><span>Home</span></a></li>
+                <li><a href="#"><img src="images/network.png" ><span>My Network</span></a></li>
+                <li><a href="#"><img src="images/jobs.png" ><span>Jobs</span></a></li>
+                <li><a href="#"><img src="images/message.png" ><span>Massaging</span></a></li>
+                <li><a href="#"><img src="images/notification.png" ><span>Notifications</span></a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="online">
+                <img src="images/user-1.png" class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+        </div>
+
+        <!-- profile-drop-menu -->
+
+        <div class="profile-menu-wrap" id="profilemenu">
+            <div class="profile-menu">
+                <div class="user-info">
+                    <img src="images/user-1.png" alt="">
+                    <div>
+                        <h3>DHIRAJ KUMAR</h3>
+                        <a href="profile.html">See Your Profile</a>
+                    </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="images/feedback.png" alt="">
+                    <p>Give feedback</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="profile-menu-link">
+                    <img src="images/setting.png" alt="">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="profile-menu-link">
+                    <img src="images/help.png" alt="">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="profile-menu-link">
+                    <img src="images/display.png" alt="">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+
+                <a href="#" class="profile-menu-link">
+                    <img src="images/logout.png" alt="">
+                    <p>Logout </p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav> 
+    <!-- end navbar -->
+
+    <div class="container">
+        <div class="profile-main">
+            <div class="profile-container">
+                <img src="images/cover-pic.png" width="100%">
+                <div class="profile-container-inner">
+                    <img src="images/user-1.png" class="profile-pic" alt="">
+                    <h1>DHIRAJ KUMAR</h1>
+                    <b>Web Developer | Former developer at Web Development and Intern at Alfido Tech</b>
+                    <p>Python | Django | MySQL | React js | JavaScript | HTML | CSS3 | Bootstrap &middot; <a href="#">Contact info</a></p>
+                    <div class="mutual-connection">
+                        <img src="images/user-3.png" alt="">
+                        <span>1 mutual connection:Abhishek Aanand</span>
+                    </div>
+                    <div class="profile-btn">
+                        <a href="#"  class="primary-btn"><img src="images/connect.png" > Connect</a>
+                        <a href="#"><img src="images/chat.png" >Message</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="profile-dict">
+                <h2>About</h2>
+                <p>
+                    I am a passionate web developer with a strong foundation in front-end and back-end 
+                    technologies. My expertise includes HTML, CSS, Bootstrap, JavaScript, and React js.
+                     for creating dynamic and responsive user interfaces. On the backend, 
+                     I specialize in Python, Django, and MySQL, enabling me to build robust and scalable
+                      web applications. With a commitment to continuous learning and a keen eye for detail, I strive to deliver high-quality, user-centered digital experiences.</p>
+                     <a href="#" class="see-more-link">See More...</a>
+            </div>
+
+            <div class="profile-dect1">
+                <h2>Education</h2>
+                <div class="profile-desc-row">
+                    <img src="images/stanford.png" alt="">
+                    <div>
+                        <h3>Patel College of Science & Technology,Bhopal</h3>
+                        <b>CSE,Computer Science Engineering</b>
+                        <b>2020-2024</b>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="profile-desc-row">
+                    <img src="images/north.png" alt="">
+                    <div>
+                        <h3>S.S.108.M.R.J.D.I.College,Bisnupur,Begusarai</h3>
+                        <b>12th, Science</b>
+                        <b>2018-2020</b>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="profile-desc-row">
+                    <img src="images/north.png" alt="">
+                    <div>
+                        <h3>Utkramit MS Godargama,Matihani,Begusarai</h3>
+                        <b>10th, Matric</b>
+                        <b>2017-2018</b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-dect1">
+                <h2>Licenses & Certifications</h2>
+                <div class="profile-desc-row">
+                    <img src="images/cybrom.png" alt="">
+                    <div>
+                        <h3>Cybrom Technology Pvt & Ltd.</h3>
+                        <b>Python Full Stack Development</b>
+                        <b>Credential ID :- PY-2023-76</b>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="profile-desc-row">
+                    <img src="images/learntube.png" class="learntube">
+                    <div>
+                        <h3>LearTube by CareerNinja</h3>
+                        <b>Basic Web Development</b>
+                        <b>Credential ID :- BAS-M-2-3706-94996</b>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="profile-desc-row">
+                    <img src="images/learntube.png" class="learntube">
+                    <div>
+                        <h3>LearTube by CareerNinja</h3>
+                        <b>Advance Web Development</b>
+                        <b>Credential ID :- ADV-M-2-3707-94996</b>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="profile-desc-row">
+                    <img src="images/vps.png" alt="">
+                    <div>
+                        <h3>Advance Diploma in Computer Application</h3>
+                        <b>VPS Computer</b>
+                        <b>Credential ID :- VPS-PROD-08-3951</b>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-dict">
+                <h2>Skills</h2>
+                <a href="#" class="skills-btn">Developer</a>
+                <a href="#" class="skills-btn">Python</a>
+                <a href="#" class="skills-btn">Django</a>
+                <a href="#" class="skills-btn">MySQL</a>
+                <a href="#" class="skills-btn">HTML</a>
+                <a href="#" class="skills-btn">CSS</a>
+                <a href="#" class="skills-btn">Bootstrap</a>
+                <a href="#" class="skills-btn">Java Script</a>
+                <a href="#" class="skills-btn">React js</a>
+                <a href="#" class="skills-btn">Coding</a>
+                <a href="#" class="skills-btn">Leadership</a>
+                <a href="#" class="skills-btn">UI/UX</a>
+            </div>
+
+            <div class="profile-dict">
+                <h2>Languages</h2>
+                <a href="#" class="language-btn">English</a>
+                <a href="#" class="language-btn">Hindi</a>
+            </div>
+        </div>
+
+
+        <!-- profile-sidebar -->
+        <div class="profile-sidebar">
+            <div class="sidebar-ad">
+                <small>Ad &middot; &middot; &middot;</small>
+                <p>Master the 5 principal of web design</p>
+                <div>
+                    <img src="images/user-1.png">
+                    <img src="images/mi-logo.png" alt="">
+                </div>
+                <b>Brand the Demand in Xiaomi</b>
+                <a href="#" class="ad-link">Learn More</a>
+            </div>
+
+            <div class="sidebar-people">
+                <h3>People You may Know</h3>
+
+                <div class="sidebar-people-row">
+                    <img src="images/gautam.jpg" alt="">
+                    <div>
+                        <h2>Gautam Kumar</h2>
+                        <p>MBA,Sales & Marketing</p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+
+
+                <div class="sidebar-people-row">
+                    <img src="images/user-3.png" alt="">
+                    <div>
+                        <h2>Abhishek Aanand</h2>
+                        <p>Ethical Hacker Cyber Security</p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-people-row">
+                    <img src="images/rohan.jpg" alt="">
+                    <div>
+                        <h2>Rohan Kumar</h2>
+                        <p>Electical & Electronic Engineering</p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-people-row">
+                    <img src="images/manish.jpg" alt="">
+                    <div>
+                        <h2>Manish Kumar</h2>
+                        <p>Civil Engineering</p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-people-row">
+                    <img src="images/vicky.jpg" alt="">
+                    <div>
+                        <h2>Vicky Kumar</h2>
+                        <p>Computer Science Engineering</p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-people-row">
+                    <img src="images/user-1.png" alt="">
+                    <div>
+                        <h2>Dhiraj kumar </h2>
+                        <p>Computer Science Engineering</p>
+                        <a href="#">Connect</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="profile-footer">
+        <div class="sidebar-userful-link">
+            <a href="#">About</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Help Center</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Advertising</a>
+            <a href="#">Get the App</a>
+            <a href="#">More</a>
+        </div>
+        <div class="copyright-msg">
+            <img src="images/logo.png" >
+            <p>Linkeup &#169; 2022. All right reserved</p>
+        </div>
+    
+</div>
+    </div>
+
+    <script>
+        let profilemenu=document.getElementById('profilemenu');
+
+        function toggleMenu(){
+            profilemenu.classList.toggle('open-menu');
+            
+        }
+    </script>
+</body>
+</html>
